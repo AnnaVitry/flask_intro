@@ -53,9 +53,9 @@ mon_projet/
 ---
 
 ## Concepts clés
- - **Routes**: définissnt les URL et leurs fonctions associées(<@app.route>)
+ - **Routes**: définissnt les URL et leurs fonctions associées(`@app.route`)
  - **Templates**: HTML dynamiqur avec Jinja2.
- - **Request & Response**: gestion des requêtes(<GET>, <POST>, ...).
+ - **Request & Response**: gestion des requêtes(`GET`, `POST`, ...).
  - **Extensions**: ajout de fonctionnalités (base de données avec SQLAlchemy, authentication, etc.).
 
  ---
