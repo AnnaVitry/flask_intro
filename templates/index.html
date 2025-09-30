@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma page Flask</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <header>
-        <h1>Bienvenue sur mon site Flask 🚀</h1>
-    </header>
+{% extends "base.html" %}
 
-    <main>
-        <h2></h2>
-        <p></p>
+{% block title %}À propos{% endblock %}
+
+{% block content %}
+  <h2>À propos</h2>
+  <p>Ce site montre comment utiliser l’héritage Jinja2.</p>
+{% endblock %}

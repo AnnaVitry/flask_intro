@@ -1,8 +1,7 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from markupsafe import escape
 
 app = Flask(__name__)
-
 
 # # pour lancer depuis `python3 app.py` en terminal
 # if __name__=="__main__":
@@ -24,27 +23,41 @@ def salut(name):
     return f'<p>Hello {escape(name)}!</p>'
 
 # Exercice 4
-@app.route('/index')
-def index():
+@app.route('/base')
+def base():
     return render_template('index.html')
 
 # Exercice 5
 @app.route('/age', methods=['POST', 'GET'])
 def age():
     if request.method == 'POST':
-        name = request.form['username']
         age = request.form['age']
         return f'<p>tu as {escape(age)} ans</p>'
+    
+    return '''
+        <form method="post">
+            <input type="text" name="age">
+            <input type="submit" value="Envoyer">
+        </form>
+        '''
+# Exercic 6
+articles = [
+    {"title": "Introduction à Flask", "author": "Alice"},
+    {"title": "Découvrir Jinja2", "author": "Bob"},
+    {"title": "API REST avec Flask", "author": "Charlie"}
+]
 
-# @app.route('/login', methods=['POST', 'GET'])
-# def login():
-#     error = None
-#     if request.method == 'POST':
-#         if valid_login(request.form['username'],
-#                        request.form['password']):
-#             return log_the_user_in(request.form['username'])
-#         else:
-#             error = 'Invalid username/password'
-#     # the code below is executed if the request method
-#     # was GET or the credentials were invalid
-#     return render_template('login.html', error=error)
+@app.route("/articles")
+def index():
+    return render_template("articles.html", articles=articles)
+
+# Exercice 7
+# Voir static/style.css
+
+# 8. Route JSON /api/ping
+@app.route("/api/ping")
+def api_ping():
+    return jsonify({"ping": "pong"})
+
+if __name__ == "__main__":
+    app.run(debug=True)

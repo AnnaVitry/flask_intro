@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Mon site Flask{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Mon site avec Flask</h1>
+        <nav>
+            <a href="/">Accueil</a> |
+            <a href="/about">À propos</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    {% block scripts %}{% endblock %}
+    <footer>
+        <p>&copy; 2025 - Formation Flask</p>
+    </footer>
+</body>
+</html>
