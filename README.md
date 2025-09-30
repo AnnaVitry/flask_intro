@@ -1,5 +1,7 @@
 # Flask – Mini Framework Web en Python
 
+Pour lancer le app.py: flask run
+
 ## Qu’est-ce que Flask ?
 [Flask](https://flask.palletsprojects.com/) est un **micro-framework web** écrit en Python.  
 Il est conçu pour être **simple, léger et extensible**, parfait pour créer rapidement des applications web, des API REST ou des prototypes.  
