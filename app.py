@@ -23,6 +23,7 @@ def accueil():
         <li><a href="/add_user/TestUser">Ajouter utilisateur</a></li>
         <li><a href="/users">Liste des utilisateurs</a></li>
         <li><a href="/search?q=Flask">Recherche</a></li>
+        <li><a href="/404">404</a></li>
     </ul>
     '''
 # Exercice 1
