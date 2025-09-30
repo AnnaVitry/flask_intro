@@ -10,3 +10,10 @@
 8. Crée une route `/api/ping` qui retourne du JSON :  
    ```json
    { "ping": "pong" }
+9. Utilise SQLite pour créer une table users(name TEXT) et insérer un utilisateur via une route.
+10. Crée /users qui liste les utilisateurs depuis SQLite dans un template.
+11. Ajoute un gestionnaire d’erreur 404 personnalisé avec un template 404.html.
+12. Lis un paramètre de query string /search?q=... et affiche la requête.
+13. Crée un Blueprint blog avec une route /blog séparée dans un module.
+14. (SQLAlchemy) Crée un modèle Note(title, body) avec Flask-SQLAlchemy, routes pour créer et lister.
+15. Crée une endpoint /api/patients qui renvoie la liste des patients depuis SQLite en JSON (prépare pour le projet e-santé).
